@@ -22,6 +22,6 @@ for row in csvreader:
 #create and calculate variable for avg profits/losses
 avg_pl = profit_loss / len(csvreader)
 
-print(f'Total Profits: {profit_loss}')
+print(f'Total Profits: ${profit_loss}')
 print(f'Total Months: {months}')
-print(f'Average Profits: {avg_pl}')
+print(f'Average Profits: ${avg_pl}')
