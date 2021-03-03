@@ -2,8 +2,8 @@ import os
 import csv
 
 
-# Set path for file
-csvpath = os.path.join("..", "Resources", "budget_data.csv")
+# set path to .csv file
+csvpath = os.path.join("PyBank","Resources", "budget_data.csv")
 
 
 # Open the CSV
@@ -19,5 +19,9 @@ for row in csvreader:
     months += row[0]
     profit_loss += row[1]
 
+#create and calculate variable for avg profits/losses
+avg_pl = profit_loss / len(csvreader)
 
-
+print(f'Total Profits: {profit_loss}')
+print(f'Total Months: {months}')
+print(f'Average Profits: {avg_pl}')
