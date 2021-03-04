@@ -17,14 +17,20 @@ with open(csvpath) as csvfile:
     csv_header = next(csvreader)
     print(f"Bank: {csv_header}")
     
-    #use for loop to add all months and profits
+    # use for loop to add all months and profits
     for row in csvreader:
         months += 1
         profit_loss += row[1]
 
-#create and calculate variable for avg profits/losses
+# create and calculate variable for avg profits/losses
 avg_pl = profit_loss / len(csvreader)
 
+# create variables for greatest profit/loss, incrementer
+# use for loop to find greatest profit/loss
+# if current row is greater OR less than current variables then set to current row
+# increase incrementer regardless
+
+#print all collected variables
 print(f'Total Profits: ${profit_loss}')
 print(f'Total Months: {months}')
 print(f'Average Profits: ${avg_pl}')
