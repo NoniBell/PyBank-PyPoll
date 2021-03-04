@@ -17,8 +17,9 @@ with open(csvpath) as csvfile:
     csv_header = next(csvreader)
     print(f"Bank: {csv_header}")
     
+    #use for loop to add all months and profits
     for row in csvreader:
-         months += row[0]
+        months += 1
         profit_loss += row[1]
 
 #create and calculate variable for avg profits/losses
