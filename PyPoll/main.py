@@ -31,5 +31,23 @@ with open(csvpath) as csvfile:
         if str(row[2]) == "O'Tooley":
             otooley_v += 1
 
-    
+#calculate percentage of votes candidates received
+khan_p = khan_v / total_votes * 100
+khan_p = round(khan_p, 5)
+correy_p = correy_v / total_votes * 100
+correy_p = round(correy_p, 5)
+li_p = li_v / total_votes * 100
+li_p = round(li_p, 5)
+otooley_p = otooley_v / total_votes * 100
+otooley_p = round(otooley_p, 5)
+
+#print final totals
+print("Election Results")
+print("------------------------")
+print(f'Total Votes: {total_votes}')
+print("------------------------")
+print(f'Khan: {khan_p}% ({khan_v})')
+print(f'Correy: {correy_p}% ({correy_v})')
+print(f'Li: {li_p}% ({li_v})')
+print(f"O'Tooley: {otooley_p}% ({otooley_v})")    
 
