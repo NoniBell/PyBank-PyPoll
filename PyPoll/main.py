@@ -16,7 +16,6 @@ with open(csvpath) as csvfile:
 
     # eliminate the header row
     csv_header = next(csvreader)
-    print(f"Polls: {csv_header}")
 
     #for loop to count votes
     for row in csvreader:
@@ -31,15 +30,15 @@ with open(csvpath) as csvfile:
         if str(row[2]) == "O'Tooley":
             otooley_v += 1
 
-#calculate percentage of votes candidates received
+#calculate percentage of votes candidates received, round
 khan_p = khan_v / total_votes * 100
-khan_p = round(khan_p, 5)
+khan_p = round(khan_p, 3)
 correy_p = correy_v / total_votes * 100
-correy_p = round(correy_p, 5)
+correy_p = round(correy_p, 3)
 li_p = li_v / total_votes * 100
-li_p = round(li_p, 5)
+li_p = round(li_p, 3)
 otooley_p = otooley_v / total_votes * 100
-otooley_p = round(otooley_p, 5)
+otooley_p = round(otooley_p, 3)
 
 #print final totals
 print("Election Results")

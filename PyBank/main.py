@@ -21,7 +21,6 @@ with open(csvpath) as csvfile:
     
     # eliminate the header row
     csv_header = next(csvreader)
-    print(f"Bank: {csv_header}")
     
     # use for loop to add all months and profits
     for row in csvreader:
