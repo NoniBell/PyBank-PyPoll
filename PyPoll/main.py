@@ -53,11 +53,11 @@ print("------------------------")
 # check which candidate had the most votes
 if khan_v > correy_v and khan_v > li_v and khan_v > otooley_v:
     print("Winner: Khan")
-    elif correy_v > li_v and correy_v otooley_v:
+elif correy_v > li_v and correy_v > otooley_v:
     print("Winner: Cooley")
-    elif li_v > otooley_v:
+elif li_v > otooley_v:
     print("Winner: Li")
-    else:
+else:
     print("Winner: O'Tooley")
 print("------------------------")    
 
