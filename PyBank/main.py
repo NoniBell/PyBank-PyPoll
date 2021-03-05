@@ -20,10 +20,12 @@ with open(csvpath) as csvfile:
     # use for loop to add all months and profits
     for row in csvreader:
         months += 1
-        profit_loss += row[1]
+        profit_loss += int(row[1])
 
 # create and calculate variable for avg profits/losses
-avg_pl = profit_loss / len(csvreader)
+avg_pl = profit_loss / months
+# round average
+avg_pl = round(avg_pl, 2)
 
 # create variables for greatest profit/loss, incrementer
 # use for loop to find greatest profit/loss
