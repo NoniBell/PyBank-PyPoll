@@ -22,6 +22,14 @@ with open(csvpath) as csvfile:
     for row in csvreader:
         total_votes += 1
         #see who has the given vote
-        
+        if str(row[2]) == "Khan":
+            khan_v += 1
+        if str(row[2]) == "Correy":
+            correy_v += 1
+        if str(row[2]) == "Li":
+            li_v += 1
+        if str(row[2]) == "O'Tooley":
+            otooley_v += 1
+
     
 
