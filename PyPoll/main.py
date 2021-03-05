@@ -40,7 +40,7 @@ li_p = round(li_p, 3)
 otooley_p = otooley_v / total_votes * 100
 otooley_p = round(otooley_p, 3)
 
-#print final totals
+# print final totals
 print("Election Results")
 print("------------------------")
 print(f'Total Votes: {total_votes}')
@@ -48,5 +48,16 @@ print("------------------------")
 print(f'Khan: {khan_p}% ({khan_v})')
 print(f'Correy: {correy_p}% ({correy_v})')
 print(f'Li: {li_p}% ({li_v})')
-print(f"O'Tooley: {otooley_p}% ({otooley_v})")    
+print(f"O'Tooley: {otooley_p}% ({otooley_v})")
+print("------------------------")
+# check which candidate had the most votes
+if khan_v > correy_v and khan_v > li_v and khan_v > otooley_v:
+    print("Winner: Khan")
+    elif correy_v > li_v and correy_v otooley_v:
+    print("Winner: Cooley")
+    elif li_v > otooley_v:
+    print("Winner: Li")
+    else:
+    print("Winner: O'Tooley")
+print("------------------------")    
 
