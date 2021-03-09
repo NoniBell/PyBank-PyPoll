@@ -1,8 +1,10 @@
 import os
 import csv
 
-# Set path for file
+# set path for .csv file
 csvpath = os.path.join('PyPoll', 'Resources', 'election_data.csv')
+#set path for .txt file
+polltext = os.path.join('PyPoll', 'Analysis', 'polls.txt')
 
 #create and set variables for total votes and votes per candidate
 total_votes = 0
@@ -62,7 +64,7 @@ else:
 print("------------------------")
 
 # print final totals to text file
-with open("polls.txt", "a") as p:
+with open(polltext, "w") as p:
     print("Election Results", file=p)
     print("------------------------", file=p)
     print(f'Total Votes: {total_votes}', file=p)
