@@ -40,7 +40,7 @@ li_p = round(li_p, 3)
 otooley_p = otooley_v / total_votes * 100
 otooley_p = round(otooley_p, 3)
 
-# print final totals
+#print final totals to terminal
 print("Election Results")
 print("------------------------")
 print(f'Total Votes: {total_votes}')
@@ -59,5 +59,27 @@ elif li_v > otooley_v:
     print("Winner: Li")
 else:
     print("Winner: O'Tooley")
-print("------------------------")    
+print("------------------------")
+
+# print final totals to text file
+with open("polls.txt", "a") as p:
+    print("Election Results", file=p)
+    print("------------------------", file=p)
+    print(f'Total Votes: {total_votes}', file=p)
+    print("------------------------", file=p)
+    print(f'Khan: {khan_p}% ({khan_v})', file=p)
+    print(f'Correy: {correy_p}% ({correy_v})', file=p)
+    print(f'Li: {li_p}% ({li_v})', file=p)
+    print(f"O'Tooley: {otooley_p}% ({otooley_v})", file=p)
+    print("------------------------", file=p)
+    # check which candidate had the most votes
+    if khan_v > correy_v and khan_v > li_v and khan_v > otooley_v:
+        print("Winner: Khan", file=p)
+    elif correy_v > li_v and correy_v > otooley_v:
+        print("Winner: Cooley", file=p)
+    elif li_v > otooley_v:
+        print("Winner: Li", file=p)
+    else:
+        print("Winner: O'Tooley", file=p)
+    print("------------------------", file=p)    
 
